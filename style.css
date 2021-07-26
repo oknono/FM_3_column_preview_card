@@ -7,6 +7,11 @@
     --body-text-color: hsla(0, 0%, 100%, 0.75);
     --accent-text-color: hsl(0, 0%, 95%);
     --body-font-size: 15px;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -19,21 +24,46 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    margin: 88px 24px;
+    align-items: center;
+}
+
+@media screen and (min-width: 850px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 170px;
+    }
 }
 
 .card {
     padding: 48px;
+    max-width: 307px;
 }
 
 .card:first-of-type {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 850px) {
+    .card:first-of-type {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: var(--border-radius);
+    }
 }
 
 .card:last-of-type {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 850px) {
+    .card:last-of-type {
+        border-top-right-radius: var(--border-radius);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: var(--border-radius);
+    }
 }
 
 .card_title {
@@ -41,10 +71,17 @@ body {
     color: var(--accent-text-color);
     font-size: 40px;
     text-transform: uppercase;
+    padding-top: 10px
 }
 
 .card_text {
     padding: 15px 0;
+}
+
+@media screen and (min-width: 850px) {
+    .card_text {
+        padding-bottom: 80px;
+    }
 }
 
 .card_button {
@@ -52,10 +89,35 @@ body {
     padding: 12px 32px;
     border-radius: 32px;
     text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--accent-text-color);
 }
 
 .card.orange .card_button {
     color: var(--primary-color-orange);
+}
+
+.card.orange .card_button:hover {
+    background-color: var(--primary-color-orange);
+    color: var(--accent-text-color);
+}
+
+.card.cyan .card_button {
+    color: var(--primary-color-cyan);
+}
+
+.card.cyan .card_button:hover {
+    background-color: var(--primary-color-cyan);
+    color: var(--accent-text-color);
+}
+
+.card.dark_cyan .card_button {
+    color: var(--primary-color-dark-cyan);
+}
+
+.card.dark_cyan .card_button:hover {
+    background-color: var(--primary-color-dark-cyan);
+    color: var(--accent-text-color);
 }
 
 .card.orange {
@@ -66,16 +128,8 @@ body {
     background-color: var(--primary-color-cyan);
 }
 
-.card.cyan .card_button {
-    color: var(--primary-color-cyan);
-}
-
 .card.dark_cyan {
     background-color: var(--primary-color-dark-cyan);
-}
-
-.card.dark_cyan .card_button {
-    color: var(--primary-color-dark-cyan);
 }
 
 .attribution {
