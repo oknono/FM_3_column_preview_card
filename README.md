@@ -24,11 +24,11 @@ Users should be able to:
 
 Mobile
 
-![](./screenshots/screenshot_mobile.jpg)
+![](https://github.com/oknono/FM_3_column_preview_card/blob/main/screenshots/screenshot_mobile.png)
 
 Desktop
 
-![](./screenshots/screenshot_desktop.jpg)
+![](https://github.com/oknono/FM_3_column_preview_card/blob/main/screenshots/screenshot_desktop.png)
 
 
 ### Links
