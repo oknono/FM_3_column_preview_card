@@ -77,6 +77,10 @@ img {
     text-transform: uppercase;
 }
 
+.card_text {
+    padding-bottom: 24px;
+}
+
 @media screen and (min-width: 900px) {
     .card_text {
         padding-bottom: 80px;
