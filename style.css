@@ -25,7 +25,7 @@ body {
     flex-direction: column;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 900px) {
     .container {
         flex-direction: row;
         justify-content: center;
@@ -36,6 +36,7 @@ body {
 .card {
     max-width: 307px;
     padding: 48px;
+    padding-bottom: 60px;
 }
 
 .card:first-of-type {
@@ -43,7 +44,7 @@ body {
     border-top-right-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 900px) {
     .card:first-of-type {
         border-bottom-left-radius: var(--border-radius);
         border-top-left-radius: var(--border-radius);
@@ -56,7 +57,7 @@ body {
     border-bottom-right-radius: var(--border-radius);
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 900px) {
     .card:last-of-type {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: var(--border-radius);
@@ -64,19 +65,19 @@ body {
     }
 }
 
+img {
+    padding-bottom: 10px;
+}
+
 .card_title {
     color: var(--color-text-accent);
     font-family: 'Big Shoulders Display';
     font-size: 40px;
-    padding-top: 10px;
+    padding-bottom: 10px;
     text-transform: uppercase;
 }
 
-.card_text {
-    padding: 15px 0;
-}
-
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 900px) {
     .card_text {
         padding-bottom: 80px;
     }
@@ -87,7 +88,7 @@ body {
     border-radius: 32px;
     border: 1px solid var(--color-text-accent);
     cursor: pointer;
-    padding: 12px 32px;
+    padding: 14px 32px;
     text-decoration: none;
 }
 
