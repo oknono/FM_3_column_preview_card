@@ -12,24 +12,33 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     color: var(--color-body-text);
     font-family: 'Lexend Deca';
     font-size: var(--font-size-body);
     line-height: 25px;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container {
     align-items: center;
     display: flex;
     flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 30%;
+    max-width: 900px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
     .container {
         flex-direction: row;
-        justify-content: center;
         margin-top: 170px;
+        width: 80%;
     }
 }
 
@@ -39,31 +48,6 @@ body {
     padding-bottom: 60px;
 }
 
-.card:first-of-type {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
-
-@media screen and (min-width: 900px) {
-    .card:first-of-type {
-        border-bottom-left-radius: var(--border-radius);
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: 0px;
-    }
-}
-
-.card:last-of-type {
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-}
-
-@media screen and (min-width: 900px) {
-    .card:last-of-type {
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
-    }
-}
 
 img {
     padding-bottom: 10px;
@@ -81,7 +65,7 @@ img {
     padding-bottom: 24px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
     .card_text {
         padding-bottom: 80px;
     }
